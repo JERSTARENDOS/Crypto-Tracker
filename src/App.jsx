@@ -6,6 +6,7 @@ import PriceAlerts from "./components/PriceAlerts";
 import MarketInsights from "./components/MarketInsights";
 import { fetchCoins } from "./services/api";
 import "./App.css";
+import "./responsive.css";
 
 export default function App() {
   const [selected, setSelected] = useState(null);

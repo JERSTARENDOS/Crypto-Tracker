@@ -1,0 +1,548 @@
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE FIRST
+   ============================================ */
+
+/* Extra Small Devices (320px - 480px) */
+@media (max-width: 480px) {
+  .app-header {
+    padding: 30px 15px;
+  }
+
+  .app-title {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+
+  .app-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .tab-navigation {
+    padding: 0 10px 20px;
+    gap: 8px;
+  }
+
+  .tab-btn {
+    padding: 10px 14px;
+    font-size: 0.7rem;
+    letter-spacing: 0;
+    flex: 1;
+    min-width: auto;
+  }
+
+  .container {
+    padding: 15px 12px;
+  }
+
+  .coin-section,
+  .portfolio-section,
+  .alerts-section,
+  .insights-section {
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+
+  .coin-section h2,
+  .portfolio-section h2,
+  .alerts-section h2,
+  .insights-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-input,
+  .sort-select {
+    width: 100%;
+    min-width: unset;
+    padding: 12px 12px;
+    font-size: 0.9rem;
+  }
+
+  .coin-table th,
+  .holdings-table th,
+  .alerts-table th {
+    padding: 10px 8px;
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+  }
+
+  .coin-table td,
+  .holdings-table td,
+  .alerts-table td {
+    padding: 10px 8px;
+    font-size: 0.85rem;
+  }
+
+  .coin-name,
+  .mover-name {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .coin-name img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .symbol {
+    font-size: 0.75rem;
+  }
+
+  .btn-add {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+
+  .btn-add-primary {
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+
+  .btn-delete,
+  .btn-secondary {
+    padding: 6px 8px;
+    font-size: 0.7rem;
+  }
+
+  .portfolio-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .stat {
+    padding: 16px;
+  }
+
+  .stat label {
+    font-size: 0.7rem;
+    margin-bottom: 8px;
+  }
+
+  .stat span {
+    font-size: 1.3rem;
+  }
+
+  .add-holding,
+  .add-alert {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .holding-inputs,
+  .alert-inputs {
+    flex-direction: column;
+  }
+
+  .holding-inputs input,
+  .alert-inputs input,
+  .holding-inputs select,
+  .alert-inputs select {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .global-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .stat-card {
+    padding: 16px;
+  }
+
+  .stat-value {
+    font-size: 1.4rem;
+  }
+
+  .market-movers {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .trending-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .trending-card {
+    padding: 12px;
+  }
+
+  .trending-rank {
+    width: 28px;
+    height: 28px;
+    font-size: 0.75rem;
+  }
+
+  .modal {
+    padding: 20px;
+    max-height: 90vh;
+  }
+
+  .modal-header {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .modal-title h2 {
+    font-size: 1.4rem;
+  }
+
+  .chart-container {
+    max-height: 300px;
+    padding: 15px;
+  }
+
+  .timeframe-buttons {
+    gap: 6px;
+  }
+
+  .btn-timeframe {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  .modal-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .alerts-table .actions {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .notification {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+
+  .empty {
+    padding: 30px 15px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Small Devices (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .app-header {
+    padding: 35px 20px;
+  }
+
+  .app-title {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+  }
+
+  .app-subtitle {
+    font-size: 1rem;
+  }
+
+  .tab-navigation {
+    padding: 0 15px 25px;
+    gap: 10px;
+  }
+
+  .tab-btn {
+    padding: 11px 18px;
+    font-size: 0.8rem;
+    letter-spacing: 0.3px;
+  }
+
+  .container {
+    padding: 20px 15px;
+    max-width: 100%;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .search-input,
+  .sort-select {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .coin-section,
+  .portfolio-section,
+  .alerts-section,
+  .insights-section {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .coin-table th,
+  .holdings-table th,
+  .alerts-table th {
+    padding: 12px 10px;
+    font-size: 0.7rem;
+  }
+
+  .coin-table td,
+  .holdings-table td,
+  .alerts-table td {
+    padding: 12px 10px;
+    font-size: 0.9rem;
+  }
+
+  .portfolio-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .global-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .market-movers {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .trending-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .btn-add-primary {
+    width: 100%;
+  }
+
+  .holding-inputs,
+  .alert-inputs {
+    flex-direction: column;
+  }
+
+  .holding-inputs input,
+  .alert-inputs input,
+  .holding-inputs select,
+  .alert-inputs select {
+    width: 100%;
+  }
+
+  .modal {
+    padding: 25px;
+    max-width: 95%;
+  }
+
+  .modal-title {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .chart-container {
+    max-height: 350px;
+  }
+
+  .timeframe-buttons {
+    gap: 8px;
+  }
+}
+
+/* Tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .app-title {
+    font-size: 2.8rem;
+  }
+
+  .tab-navigation {
+    padding: 0 20px 25px;
+  }
+
+  .tab-btn {
+    padding: 12px 22px;
+    font-size: 0.9rem;
+  }
+
+  .container {
+    max-width: 95%;
+  }
+
+  .controls {
+    flex-wrap: wrap;
+  }
+
+  .search-input {
+    min-width: 200px;
+  }
+
+  .portfolio-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .global-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .market-movers {
+    grid-template-columns: 1fr;
+  }
+
+  .trending-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .modal {
+    max-width: 90%;
+  }
+
+  .chart-container {
+    max-height: 380px;
+  }
+}
+
+/* Medium Devices (1025px - 1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .portfolio-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .global-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .market-movers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trending-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .modal {
+    max-width: 85%;
+  }
+}
+
+/* Large Devices (1281px+) */
+@media (min-width: 1281px) {
+  .container {
+    max-width: 1400px;
+  }
+
+  .portfolio-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .chart-container {
+    max-height: 420px;
+  }
+}
+
+/* Touch Devices Optimization */
+@media (hover: none) and (pointer: coarse) {
+  .btn-add,
+  .btn-add-primary,
+  .btn-delete,
+  .btn-secondary,
+  .btn-close,
+  .tab-btn,
+  .btn-timeframe {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    min-height: 44px;
+  }
+
+  .coin-table tbody tr:hover,
+  .holdings-table tbody tr:hover,
+  .alerts-table tbody tr:hover {
+    transform: none;
+  }
+
+  .tab-btn:hover {
+    transform: none;
+  }
+
+  .btn-add:hover,
+  .btn-add-primary:hover,
+  .btn-secondary:hover {
+    transform: none;
+  }
+}
+
+/* Large Screen Scrolling */
+@media (min-height: 1024px) {
+  .modal {
+    max-height: 85vh;
+  }
+}
+
+/* Small Height Devices */
+@media (max-height: 600px) {
+  .app-header {
+    padding: 20px 20px;
+  }
+
+  .app-title {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+
+  .tab-navigation {
+    padding: 0 20px 15px;
+  }
+
+  .modal {
+    max-height: 95vh;
+  }
+
+  .chart-container {
+    max-height: 250px;
+  }
+}
+
+/* Landscape Mode */
+@media (orientation: landscape) {
+  .app-header {
+    padding: 20px;
+  }
+
+  .app-title {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+
+  .tab-navigation {
+    padding: 0 20px 15px;
+  }
+
+  .portfolio-stats,
+  .global-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .tab-navigation,
+  .empty {
+    display: none;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .coin-section,
+  .portfolio-section,
+  .alerts-section,
+  .insights-section {
+    page-break-inside: avoid;
+  }
+}
