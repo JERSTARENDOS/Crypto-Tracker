@@ -11,35 +11,30 @@ import "./responsive.css";
 export default function App() {
   const [selected, setSelected] = useState(null);
   const [coins, setCoins] = useState([]);
+  const [coinsLoading, setCoinsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState("market");
   const [portfolio, setPortfolio] = useState([]);
 
   useEffect(() => {
     let isMounted = true;
 
-    (async () => {
+    const loadInitialData = async () => {
       try {
+        setCoinsLoading(true);
         const { data } = await fetchCoins();
         if (isMounted) {
           setCoins(data);
+          setCoinsLoading(false);
         }
       } catch (error) {
         console.error("Error loading coins:", error);
+        if (isMounted) setCoinsLoading(false);
       }
-    })();
+    };
 
-    const interval = setInterval(() => {
-      (async () => {
-        try {
-          const { data } = await fetchCoins();
-          if (isMounted) {
-            setCoins(data);
-          }
-        } catch (error) {
-          console.error("Error loading coins:", error);
-        }
-      })();
-    }, 30000);
+    loadInitialData();
+
+    const interval = setInterval(loadInitialData, 30000);
 
     return () => {
       isMounted = false;
@@ -94,7 +89,7 @@ export default function App() {
       <div className="container">
         {activeTab === "market" && (
           <>
-            <CoinTable onSelect={setSelected} onAddToPortfolio={handleAddToPortfolio} />
+            <CoinTable coins={coins} loading={coinsLoading} onSelect={setSelected} onAddToPortfolio={handleAddToPortfolio} />
             {selected && (
               <ChartModal coinId={selected} close={() => setSelected(null)} />
             )}

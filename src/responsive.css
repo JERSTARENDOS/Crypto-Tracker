@@ -2,6 +2,28 @@
    RESPONSIVE DESIGN - MOBILE FIRST
    ============================================ */
 
+/* Responsive Skeleton Loading */
+.skeleton-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skeleton-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 12px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(30, 41, 59, 0.5) 100%);
+  border-radius: 10px;
+  border: 1px solid rgba(79, 70, 229, 0.1);
+}
+
+.skeleton-row > div {
+  height: 16px;
+  border-radius: 6px;
+}
+
 /* Extra Small Devices (320px - 480px) */
 @media (max-width: 480px) {
   .app-header {
@@ -42,6 +64,105 @@
     border-radius: 12px;
     margin-bottom: 20px;
   }
+
+  /* Mobile Card View Optimizations */
+  .view-mode-toggle {
+    display: flex;
+  }
+
+  .view-btn {
+    padding: 12px 14px;
+    font-size: 0.7rem;
+    flex-shrink: 0;
+  }
+
+  .coin-cards {
+    gap: 10px;
+  }
+
+  .coin-card {
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .card-header {
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .card-rank {
+    width: 36px;
+    height: 36px;
+    font-size: 0.75rem;
+  }
+
+  .card-coin-info img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .card-name {
+    font-size: 0.9rem;
+  }
+
+  .card-symbol {
+    font-size: 0.7rem;
+  }
+
+  .card-price {
+    font-size: 1.3rem;
+  }
+
+  .card-changes {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .change-item span:first-child {
+    font-size: 0.65rem;
+  }
+
+  .change-item span:last-child {
+    font-size: 0.85rem;
+  }
+
+  .card-market-cap {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .btn-add-card {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+    min-height: 44px;
+  }
+
+  /* Table Horizontal Scroll */
+  .table-wrapper {
+    -webkit-overflow-scrolling: touch;
+    margin: -15px;
+    padding: 0 15px;
+  }
+
+  .coin-table {
+    min-width: 600px;
+  }
+
+  .coin-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  /* Hide less important columns on mobile table view */
+  .coin-table td:nth-child(4),
+  .coin-table th:nth-child(4),
+  .coin-table td:nth-child(5),
+  .coin-table th:nth-child(5) {
+    display: none;
+  }
+
 
   .coin-section h2,
   .portfolio-section h2,
@@ -274,6 +395,92 @@
     min-width: unset;
   }
 
+  .view-btn {
+    padding: 11px 14px;
+    font-size: 0.8rem;
+  }
+
+  /* Card View for Small Devices */
+  .view-mode-toggle {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .coin-cards {
+    gap: 12px;
+  }
+
+  .coin-card {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .card-header {
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .card-rank {
+    width: 40px;
+    height: 40px;
+    font-size: 0.8rem;
+  }
+
+  .card-coin-info img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .card-name {
+    font-size: 0.95rem;
+  }
+
+  .card-symbol {
+    font-size: 0.75rem;
+  }
+
+  .card-price {
+    font-size: 1.4rem;
+  }
+
+  .card-changes {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .change-item span:last-child {
+    font-size: 0.9rem;
+  }
+
+  .card-market-cap {
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+
+  .btn-add-card {
+    padding: 12px 16px;
+    font-size: 0.85rem;
+  }
+
+  /* Table Improvements */
+  .table-wrapper {
+    border-radius: 12px;
+  }
+
+  .coin-table {
+    min-width: 550px;
+  }
+
+  /* Show all columns on tablets */
+  .coin-table td:nth-child(4),
+  .coin-table th:nth-child(4),
+  .coin-table td:nth-child(5),
+  .coin-table th:nth-child(5) {
+    display: table-cell;
+  }
+
+
   .coin-section,
   .portfolio-section,
   .alerts-section,
@@ -357,6 +564,11 @@
     font-size: 2.8rem;
   }
 
+  /* Skeleton for Tablets */
+  .skeleton-row {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
   .tab-navigation {
     padding: 0 20px 25px;
   }
@@ -434,6 +646,11 @@
 @media (min-width: 1281px) {
   .container {
     max-width: 1400px;
+  }
+
+  /* Skeleton for Large Screens */
+  .skeleton-row {
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr 1fr;
   }
 
   .portfolio-stats {

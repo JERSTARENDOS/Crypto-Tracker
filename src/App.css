@@ -277,6 +277,203 @@ html {
   color: #f87171;
 }
 
+/* Mobile Card View */
+.view-mode-toggle {
+  display: flex;
+}
+
+.view-btn {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.3) 0%, rgba(79, 70, 229, 0.2) 100%);
+  border: 1.5px solid rgba(79, 70, 229, 0.4);
+  color: #e2e8f0;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.view-btn:hover {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.5) 0%, rgba(79, 70, 229, 0.4) 100%);
+  border-color: rgba(79, 70, 229, 0.6);
+}
+
+.view-btn.active {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  border-color: #60a5fa;
+  box-shadow: 0 0 20px rgba(96, 165, 250, 0.3);
+}
+
+/* Table Wrapper */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Card Layout */
+.coin-cards {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.coin-card {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(30, 41, 59, 0.5) 100%);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(79, 70, 229, 0.2);
+  border-radius: 16px;
+  padding: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-left: 4px solid transparent;
+}
+
+.coin-card:active {
+  transform: scale(0.98);
+}
+
+.coin-card.positive {
+  border-left-color: #10b981;
+}
+
+.coin-card.negative {
+  border-left-color: #ef4444;
+}
+
+.coin-card:hover {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.7) 100%);
+  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.2);
+  transform: translateY(-4px);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.card-rank {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.4) 0%, rgba(79, 70, 229, 0.2) 100%);
+  border: 1px solid rgba(79, 70, 229, 0.3);
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #60a5fa;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.card-coin-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.card-coin-info img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid rgba(79, 70, 229, 0.3);
+  flex-shrink: 0;
+}
+
+.card-name {
+  font-weight: 700;
+  color: #e2e8f0;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-symbol {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.card-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #60a5fa;
+  margin-bottom: 12px;
+}
+
+.card-changes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 10px;
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(79, 70, 229, 0.05) 100%);
+  border-radius: 10px;
+}
+
+.change-item {
+  text-align: center;
+}
+
+.change-item span:first-child {
+  display: block;
+  font-size: 0.7rem;
+  color: #94a3b8;
+  margin-bottom: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.change-item span:last-child {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.card-market-cap {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  margin-bottom: 12px;
+  padding: 10px;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.4) 100%);
+  border-radius: 8px;
+}
+
+.btn-add-card {
+  width: 100%;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.btn-add-card:active {
+  transform: scale(0.98);
+}
+
+.btn-add-card:hover {
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+  transform: translateY(-2px);
+}
+
 /* Buttons */
 .btn-add,
 .btn-add-primary,
@@ -975,6 +1172,47 @@ html {
   color: #94a3b8;
   font-size: 1.1rem;
   font-weight: 500;
+}
+
+/* Skeleton Loading Animation */
+@keyframes skeleton-loading {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, rgba(79, 70, 229, 0.1) 25%, rgba(79, 70, 229, 0.2) 50%, rgba(79, 70, 229, 0.1) 75%);
+  background-size: 1000px 100%;
+  animation: skeleton-loading 2s infinite;
+  border-radius: 10px;
+}
+
+.skeleton-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skeleton-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 12px;
+  padding: 16px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(30, 41, 59, 0.5) 100%);
+  border-radius: 10px;
+  border: 1px solid rgba(79, 70, 229, 0.1);
+}
+
+.skeleton-row > div {
+  height: 20px;
+  background: linear-gradient(90deg, rgba(79, 70, 229, 0.1) 25%, rgba(79, 70, 229, 0.2) 50%, rgba(79, 70, 229, 0.1) 75%);
+  background-size: 1000px 100%;
+  animation: skeleton-loading 2s infinite;
+  border-radius: 6px;
 }
 
 /* Scrollbar Styling */
